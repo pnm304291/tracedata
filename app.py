@@ -5,12 +5,18 @@ import os
 import re
 import time
 import uuid
+from pathlib import Path
 from typing import List, Tuple
 
 import pandas as pd
 from flask import Flask, abort, render_template, request, send_file
 
-app = Flask(__name__)
+BASE_DIR = Path(__file__).resolve().parent
+app = Flask(
+    __name__,
+    template_folder=str(BASE_DIR / "templates"),
+    static_folder=str(BASE_DIR / "static"),
+)
 app.config["MAX_CONTENT_LENGTH"] = 30 * 1024 * 1024  # 30 MB
 
 ALLOWED_EXTENSIONS = {"csv", "xlsx", "xls"}
