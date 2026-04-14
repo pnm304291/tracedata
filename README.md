@@ -1,18 +1,18 @@
-# Trace rows from uploaded file
+# Cong cu loc dong tu file Excel/CSV
 
-## 1) Install dependencies
+## 1) Cai dat thu vien
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-## 2) Run web app
+## 2) Chay ung dung web
 
 ```powershell
 python app.py
 ```
 
-## 3) Open in browser
+## 3) Mo tren trinh duyet
 
 Go to:
 
@@ -20,20 +20,20 @@ Go to:
 http://127.0.0.1:5000
 ```
 
-## How to use
+## Cach su dung
 
-1. Upload a file (`.csv`, `.xlsx`, `.xls`).
-2. Paste values to trace (one value per line, or separated by comma).
-3. Choose:
-   - `Any value (OR)`: row matches if it contains at least one value.
-   - `All values (AND)`: row matches only if it contains all values.
-4. Click **Trace** to see matching rows.
-5. Click **Export CSV** or **Export Excel** to download the matched result.
+1. Tai len file (`.csv`, `.xlsx`, `.xls`).
+2. Nhap gia tri/ky tu can loc (moi dong 1 gia tri, hoac cach nhau boi dau phay).
+3. Chon che do:
+   - `Chua bat ky gia tri nao (OR)`: dong khop neu chua it nhat 1 gia tri.
+   - `Chua tat ca gia tri (AND)`: dong khop chi khi chua day du tat ca gia tri.
+4. Bam **Loc Du Lieu** de xem cac dong khop.
+5. Bam **Tai CSV** hoac **Tai Excel** de tai ket qua.
 
-Notes:
-- File size is limited to 30 MB.
-- The page shows up to 1000 matched rows for performance.
-- Export token is kept in memory for about 1 hour. If expired, run trace again.
+Luu y:
+- Gioi han kich thuoc file: 30 MB.
+- Trang chi hien toi da 1000 dong khop de dam bao toc do.
+- Ma xuat file duoc luu trong bo nho khoang 1 gio. Neu het han, hay loc lai.
 
 ## Deploy online (Render)
 
